@@ -1,0 +1,5 @@
+package com.hrd.common.controller;
+
+public class ActionVO {
+	
+}

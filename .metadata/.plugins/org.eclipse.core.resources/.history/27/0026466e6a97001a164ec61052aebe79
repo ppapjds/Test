@@ -1,0 +1,48 @@
+package com.hrd.member.helper;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+
+import com.hrd.common.interfaces.Helper;
+import com.hrd.common.model.ActionVO;
+import com.hrd.member.repository.MemberDAO;
+
+public class UpdateViewHelper implements Helper {
+
+	@Override
+	public ActionVO execute(ActionVO vo) throws ServletException, IOException {
+		MemberDAO dao = null;
+		try {
+			
+			dao = new MemberDAO();
+			HttpServletRequest request = vo.getRequest();
+			toInt(request.getParameter("custno"));
+			
+			dao.update(dto);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+	private int toInt(Object value) {
+		int result = 0;
+		try {
+			result = Integer.parseInt(value); 
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	private String toStr(Object obj) {
+		if(obj == null) {
+			return ""; 
+		}
+		return String.valueOf(obj);
+	}
+
+}

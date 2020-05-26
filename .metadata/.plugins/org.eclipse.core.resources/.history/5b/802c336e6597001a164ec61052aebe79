@@ -1,0 +1,28 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.hrd.member.domain.MemberDTO;
+import com.hrd.member.repository.MemberDAO;
+
+public class MainTest {
+
+	public static void main(String[] args)throws Exception {
+		List list = new MemberDAO().list();
+		
+		for (Object obj : list) {
+			MemberDTO dto = null;
+			if (obj instanceof MemberDTO) {
+				dto = (MemberDTO) obj;
+			}
+		String str = "<tr>\r\n" + 
+		"				<td><a href=\"/member/read.do\"><%=dto.getCustno() %></a></td>\r\n" + 
+		"				<td>"+dto.getCustname()+"</td>\r\n" + 
+		"				<td>"+dto.getPhone() +"</td>\r\n" + 
+		"			</tr> ";
+		System.out.println(str);
+		}
+		
+	}		
+}

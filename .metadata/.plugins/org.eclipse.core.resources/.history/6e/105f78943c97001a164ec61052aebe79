@@ -1,0 +1,8 @@
+package com.hrd.common.connection;
+
+public class Connection {
+	private final String URL = "";
+	private final String DRIVER_NAME = "oracle.jdbc.driver.OracleDriver";
+	private final String USER_NAME = "system";
+	private final String PASSWORD = "1234";
+}

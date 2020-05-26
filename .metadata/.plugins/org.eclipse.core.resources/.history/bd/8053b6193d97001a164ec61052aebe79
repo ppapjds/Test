@@ -1,0 +1,26 @@
+package com.hrd.common.connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class ConnectionVO {
+	private final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
+	private final String DRIVER_NAME = "oracle.jdbc.driver.OracleDriver";
+	private final String USER_NAME = "system";
+	private final String PASSWORD = "1234";
+	private Connection conn;
+	
+	
+	public ConnectionVO() {
+		try {
+			Class.forName(DRIVER_NAME);
+		}catch (Exception e) {
+			System.out.println("driver load Exception");
+		}
+	}
+	 
+	public Connection getConnection() {
+		
+		return conn;
+	}
+}

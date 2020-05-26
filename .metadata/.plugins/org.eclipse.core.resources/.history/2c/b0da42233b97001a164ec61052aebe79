@@ -1,0 +1,10 @@
+package com.hrd.common.controller;
+
+public class ActionVO {
+	
+	private boolean isSend = false;
+	
+	private ActionVO() {
+	}
+	
+}

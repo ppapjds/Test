@@ -1,0 +1,29 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.hrd.member.domain.MemberDTO;
+import com.hrd.member.repository.MemberDAO;
+
+public class MainTest {
+
+	public static void main(String[] args)throws Exception {
+		MemberDAO dao = new MemberDAO();
+		MemberDTO dto = dao.read(new MemberDTO(10001));
+		
+		dto.setGrade("2");
+		
+		dao.update(dto);
+		
+		System.out.println("기존 : "+dto.getCustno());
+		dto.setCustno(dto.getCustno()+1);
+		System.out.println("up count"+dto.getCustno());
+		dto = dao.read(dto);
+		
+		dto.setGrade("3");   
+		
+		dao.update(dto);
+	
+	}		
+}

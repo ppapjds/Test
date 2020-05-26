@@ -1,0 +1,7 @@
+package com.hrd.member.domain;
+
+import java.io.Serializable;
+
+public class MemberDTO implements Serializable {
+
+}

@@ -1,0 +1,7 @@
+package com.hrd.member.helper;
+
+import com.hrd.common.model.ActionVO;
+
+public class InsertUIViewHelper extends ActionVO {
+
+}

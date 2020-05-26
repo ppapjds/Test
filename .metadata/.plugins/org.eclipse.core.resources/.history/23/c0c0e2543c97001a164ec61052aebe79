@@ -1,0 +1,5 @@
+package com.hrd.common.connection;
+
+public class Connection {
+
+}

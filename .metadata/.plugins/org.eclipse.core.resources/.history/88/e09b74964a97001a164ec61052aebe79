@@ -1,0 +1,12 @@
+CREATE TABLE MEMBER_TBL_01(
+custno	 number(6) PRIMARY KEY,
+custname varchar2(20),
+phone 	 varchar2(13),
+address varchar2(60),
+joindate date,
+grade    char(1),
+city     char(2)
+);
+
+SELECT LPAD(NVL(MAX(CUSTNO),0)+1,6,'10000') FROM MEMBER_TBL_01
+

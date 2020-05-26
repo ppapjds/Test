@@ -1,0 +1,41 @@
+package com.hrd.member.helper;
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+
+import com.hrd.common.interfaces.Helper;
+import com.hrd.common.model.ActionVO;
+
+public class ReadViewHelper implements Helper {
+
+	@Override
+	public ActionVO execute(ActionVO vo) throws ServletException, IOException {
+		// TODO Auto-
+		
+		try {
+			vo.getRequest().getParameter("custno");
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		vo.setSend(true);
+		return vo;
+	}
+
+	
+	private int toInt(Object value) {
+		int result = 0;
+		try {
+			result = Integer.parseInt(toStr(value)); 
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	private String toStr(Object obj) {
+		if(obj == null) {
+			return ""; 
+		}
+		return String.valueOf(obj);
+	}
+
+}

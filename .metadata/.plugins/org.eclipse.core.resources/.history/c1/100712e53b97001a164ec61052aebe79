@@ -1,0 +1,52 @@
+package com.hrd.common.model;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ActionVO {
+
+	private boolean isSend = false;
+	private String viewName;
+	private HttpServletRequest request;
+	private HttpServletResponse response;
+
+	public ActionVO( HttpServletRequest request,HttpServletResponse response) {
+		this.request = request;
+		this.response = response; 
+	} 
+
+	public boolean isSend() {
+		return isSend;
+	}
+
+	public void setSend(boolean isSend) {
+		this.isSend = isSend;
+	}
+
+	public String getViewName() {
+		return viewName;
+	}
+
+	public void setViewName(String viewName) {
+		this.viewName = viewName;
+	}
+
+	public ServletRequest getRequest() {
+		return request;
+	}
+
+	public void setRequest(HttpServletRequest request) {
+		this.request = request;
+	}
+
+	public ServletResponse getResponse() {
+		return response;
+	}
+
+	public void setResponse(HttpServletResponse response) {
+		this.response = response;
+	} 
+	
+}

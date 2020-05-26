@@ -1,0 +1,16 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.hrd.member.domain.MemberDTO;
+import com.hrd.member.repository.MemberDAO;
+
+public class MainTest {
+
+	public static void main(String[] args)throws Exception {
+		MemberDAO dao = new MemberDAO();
+		dao.update(new MemberDTO(10001);
+	
+	}		
+}

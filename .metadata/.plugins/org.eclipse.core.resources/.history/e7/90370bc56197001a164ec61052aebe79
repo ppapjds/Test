@@ -1,0 +1,18 @@
+package com.hrd.member.helper;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+
+import com.hrd.common.interfaces.Helper;
+import com.hrd.common.model.ActionVO;
+
+public class ListViewHelper implements Helper {
+
+	@Override
+	public ActionVO execute(ActionVO vo) throws ServletException, IOException {
+		vo.setViewName("/member/list.jsp");
+		return null;
+	}
+
+}

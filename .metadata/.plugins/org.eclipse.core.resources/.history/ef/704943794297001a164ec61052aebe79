@@ -1,0 +1,15 @@
+package com.hrd.member.domain;
+
+import java.io.Serializable;
+
+public class MemberDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
+	private int custno;
+	private String custname;
+	private String phone;
+	private String address;
+	private String joindate;
+	private String grade;
+	private String city;
+
+}
