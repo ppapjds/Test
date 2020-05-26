@@ -3,4 +3,6 @@
 	<section name="ConfigureProjectWizard">
 		<item key="selectedWizardId" value="org.eclipse.egit.ui.internal.sharing.SharingWizard"/>
 	</section>
+	<section name="SynchronizeViewSettings">
+	</section>
 </section>
