@@ -1,5 +1,0 @@
-package com.hrd.common.interfaces;
-
-public interface Helper {
-	
-}

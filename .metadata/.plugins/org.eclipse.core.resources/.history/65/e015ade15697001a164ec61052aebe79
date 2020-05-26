@@ -1,8 +1,0 @@
-package com.hrd.member.helper;
-
-import com.hrd.common.interfaces.Helper;
-
-public class InsertUIViewHelper implements Helper{
-
-	
-}
