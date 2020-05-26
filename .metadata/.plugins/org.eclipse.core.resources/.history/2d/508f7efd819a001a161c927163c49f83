@@ -1,7 +1,0 @@
-package YJ.TEST.MAIN;
-
-public class TestMain {
-	public static void main(String[] args) {
-		PPA.as("/", 2d,4d);
-	}
-}
